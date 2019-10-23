@@ -4,6 +4,7 @@
 #include "ofxGui.h"
 #include "ofxMLTK.h"
 #include "ofMath.h"
+#include "ofxColorGradient.h"
 
 using namespace std;
 

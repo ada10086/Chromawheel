@@ -107,6 +107,8 @@ void ofApp::draw(){
 //    float sum = spectrumCQSum;
     float angleBegin = 0 ;
     float angleEnd = 0 ;
+    ofColor cBegin;
+    ofColor cEnd;
     for(int i = 0 ; i < nBins; i ++ ){
         ofPath circle;
         float weight= hpcpSmooth[i]/sum;
@@ -114,26 +116,82 @@ void ofApp::draw(){
         circle.setCircleResolution(100);
         angleEnd = angleBegin + 360*weight;
         circle.arc(ofGetWidth()/2, ofGetHeight()/2,R,R,angleBegin,angleEnd);
-        ofColor c;
+        
+        ofColor cCurrent;
         circle.setCurveResolution(100);
-        c.setHsb(ofMap(i,0,nBins,0,255), 255, 255);
-        circle.setColor(c);
+        
+        cCurrent.setHsb(ofMap(i,0,nBins,0,255), 255, 255);
+        circle.setColor(255);
+//        circle.setColor(cCurrent);
         circle.draw();
+        
+        ofColor cNext;
+        cNext.setHsb(ofMap(i+1,0,nBins,0,255), 255, 255);
+        
+        
+        
+        //---------
+        //drawing gradient from angleBegin to angleEnd
+        ofxColorGradient<ofColor> gradient;
+        gradient.addColor(cCurrent);
+        gradient.addColor(cNext);
+        
+        float angle0 = angleBegin;
+        float angle1= 0.0f ;
+        
+        for(float i = 0.0f; i < 1.0f; i+= 0.01f){
+            ofPath circle;
+            
+            float step = (angleEnd - angleBegin)/100;
+            
+            angle1 = angle0 + step;
+            circle.arc(ofGetWidth()/2, ofGetHeight()/2,R,R,angle0, angle1);   //increment by 1 ranging from anglemiddle to angle end
+            circle.setCurveResolution(100);
+            circle.setColor(gradient.getColorAtPercent(i));
+            circle.draw();
+            angle0 = angle1;
+        }
+        
+//        float angleDist = 6;
+//        ofPath gradientCircle;
+//        for (int j = -3 ; j < 3; j ++){
+//            gradientCircle.arc(ofGetWidth()/2, ofGetHeight()/2,R,R,angleEnd+j,angleEnd+j+1);    //angle problem
+//            gradientCircle.setCircleResolution(100);
+//            ofColor cTransition;
+//            cTransition = cCurrent.lerp(cNext, (j+3)/6);
+//            gradientCircle.setColor(cTransition);
+//            gradientCircle.draw();
+//        }
+        
+        
+        
         angleBegin = angleEnd;
     }
     
-    ofSetColor(0);
-    ofDrawCircle(ofGetWidth()/2, ofGetHeight()/2, 100);
+//    ofSetColor(0);
+//    ofDrawCircle(ofGetWidth()/2, ofGetHeight()/2, 100);
 
-    ofColor r = ofColor::red;
-    ofSetColor(r);
-    ofDrawRectangle(0, 0, 100, 100);
-    ofColor b = ofColor::blue;
-    b.lerp(r,0.5);
-    ofSetColor(b);
-    ofDrawRectangle(100, 0, 100, 100);
-
+//    ofxColorGradient<ofColor> gradient;
+//    gradient.addColor( ofColor::red );
+//    gradient.addColor( ofColor::green );
+//
+//
+//    float angle= 0 ;
+//    for(float i = 0.0f; i < 1.0f; i+= 0.01f){
+//
+//        ofPath circle;
+//        circle.arc(ofGetWidth()/2, ofGetHeight()/2,100,100,angle,angle+1);
+//        circle.setCurveResolution(100);
+//        circle.setColor(gradient.getColorAtPercent(i));
+//        circle.draw();
+//        angle ++ ;
+//    }
     
+//    ofDrawRectangle(0, 0, 800, 100);
+//    ofColor b = ofColor::blue;
+//    b.lerp(r,0.5);
+//    ofSetColor(b);
+//    ofDrawRectangle(100, 0, 100, 100);
 }
 
 

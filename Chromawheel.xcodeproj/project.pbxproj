@@ -9786,6 +9786,70 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>BD4B331EB062FB8391F46AAC</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxColorGradient.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxColorGradient/src/ofxColorGradient.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>D43491AFCB4448B9BFCBB680</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>0CB602AF8B96DD8F3082FFDE</string>
+					<string>BD4B331EB062FB8391F46AAC</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>126B40D5DC6E4508DDE87321</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>D43491AFCB4448B9BFCBB680</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxColorGradient</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>DC3E64B573BA582B0A3FA78B</key>
+			<dict>
+				<key>fileRef</key>
+				<string>0CB602AF8B96DD8F3082FFDE</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>0CB602AF8B96DD8F3082FFDE</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxColorGradient.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxColorGradient/src/ofxColorGradient.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>6948EE371B920CB800B5AC1A</key>
 			<dict>
 				<key>children</key>
@@ -9951,6 +10015,8 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
+						<string>src</string>
+						<string>../../../addons/ofxColorGradient/src</string>
 						<string>../../../addons/ofxGui/src</string>
 						<string>../../../addons/ofxMLTK/libs</string>
 						<string>../../../addons/ofxMLTK/libs/chromaprint</string>
@@ -10138,6 +10204,8 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
+						<string>src</string>
+						<string>../../../addons/ofxColorGradient/src</string>
 						<string>../../../addons/ofxGui/src</string>
 						<string>../../../addons/ofxMLTK/libs</string>
 						<string>../../../addons/ofxMLTK/libs/chromaprint</string>
@@ -10417,6 +10485,7 @@ fi
 			<dict>
 				<key>children</key>
 				<array>
+					<string>126B40D5DC6E4508DDE87321</string>
 					<string>480A780D8D0308AE4A368801</string>
 					<string>3A1021999E9B114933321EF2</string>
 				</array>
@@ -13184,6 +13253,8 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
+						<string>src</string>
+						<string>../../../addons/ofxColorGradient/src</string>
 						<string>../../../addons/ofxGui/src</string>
 						<string>../../../addons/ofxMLTK/libs</string>
 						<string>../../../addons/ofxMLTK/libs/chromaprint</string>
@@ -13389,6 +13460,8 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
+						<string>src</string>
+						<string>../../../addons/ofxColorGradient/src</string>
 						<string>../../../addons/ofxGui/src</string>
 						<string>../../../addons/ofxMLTK/libs</string>
 						<string>../../../addons/ofxMLTK/libs/chromaprint</string>
@@ -13558,6 +13631,7 @@ fi
 				<array>
 					<string>E4B69E200A3A1BDC003C02F2</string>
 					<string>E4B69E210A3A1BDC003C02F2</string>
+					<string>DC3E64B573BA582B0A3FA78B</string>
 					<string>856AA354D08AB4B323081444</string>
 					<string>5CBB2AB3A60F65431D7B555D</string>
 					<string>853E0BA2F448076739446874</string>
@@ -13708,6 +13782,8 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
+						<string>src</string>
+						<string>../../../addons/ofxColorGradient/src</string>
 						<string>../../../addons/ofxGui/src</string>
 						<string>../../../addons/ofxMLTK/libs</string>
 						<string>../../../addons/ofxMLTK/libs/chromaprint</string>
@@ -14005,6 +14081,8 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
+						<string>src</string>
+						<string>../../../addons/ofxColorGradient/src</string>
 						<string>../../../addons/ofxGui/src</string>
 						<string>../../../addons/ofxMLTK/libs</string>
 						<string>../../../addons/ofxMLTK/libs/chromaprint</string>
