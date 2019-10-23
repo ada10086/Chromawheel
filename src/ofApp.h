@@ -14,7 +14,7 @@ class ofApp : public ofBaseApp{
         int numberOfOutputChannels = 0;
         int numberOfInputChannels = 2;
         int sampleRate = 44100;
-        int frameSize = 1024;
+        int frameSize = 2048;
         int numberOfBuffers = 1;
     
         MLTK mltk;
